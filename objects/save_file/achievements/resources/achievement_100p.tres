@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AchievementQuota" load_steps=3 format=3 uid="uid://cjf1w66jnvpys"]
+
+[ext_resource type="Texture2D" uid="uid://clftb8mkqcqyg" path="res://ui_assets/achievements/icon_achievement_one_hundo.png" id="1_0qqjx"]
+[ext_resource type="Script" path="res://objects/save_file/achievements/quota_achievement.gd" id="1_1oilw"]
+
+[resource]
+script = ExtResource("1_1oilw")
+progress_value = "achievement_count"
+quota = 24
+signal_source = 1
+signal_name = "s_achievement_unlocked"
+achievement_name = "You ARE Toon Enough!"
+achievement_summary = "Unlocked all achievements. Whew!"
+achievement_index = 24
+achievement_icon = ExtResource("1_0qqjx")

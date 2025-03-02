@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StatEffectRegeneration" load_steps=2 format=3 uid="uid://cnqqfwrcg5nnf"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/status_effects/status_effect_regeneration.gd" id="1_7oy4i"]
+
+[resource]
+script = ExtResource("1_7oy4i")
+amount = 0
+instant_effect = true
+quality = 0
+rounds = 1
+requires_user = false
+visible = true
+description = "This is a Status Effect"
+id = 12
+_generate_id = false

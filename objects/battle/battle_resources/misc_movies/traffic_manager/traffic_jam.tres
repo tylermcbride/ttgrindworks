@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d1ke8wu54fqrf"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/misc_movies/traffic_manager/traffic_jam.gd" id="1_0kwqv"]
+
+[resource]
+script = ExtResource("1_0kwqv")
+accuracy = 999
+damage = 40
+ignore_stats = true
+summary = "You've disrupted the order!"
+attack_lines = Array[String](["I'm not letting you off with a warning."])
+target_type = 0
+action_name = "Traffic Jam"
+one_time_use = false

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StatusLured" load_steps=2 format=3 uid="uid://dbdcjegogoona"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/status_effects/lured.gd" id="1_4nqnk"]
+
+[resource]
+script = ExtResource("1_4nqnk")
+lure_type = 0
+knockback_effect = 10
+damage_nerf = 0.5
+quality = 1
+rounds = 1
+requires_user = false
+visible = true
+description = "This is a Status Effect"
+id = 9
+_generate_id = false

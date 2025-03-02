@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CarbonCopy" load_steps=2 format=3 uid="uid://3l28x2fofrgl"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/cog_attacks/carbon_copy.gd" id="1_2ndfv"]
+
+[resource]
+script = ExtResource("1_2ndfv")
+accuracy = 75
+damage = 1
+summary = "Cog Mitosis?!"
+attack_lines = Array[String](["Alone, we are weak."])
+target_type = 0
+action_name = "Carbon Copy"
+one_time_use = true

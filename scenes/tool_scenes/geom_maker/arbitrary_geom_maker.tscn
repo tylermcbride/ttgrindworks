@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwobvby6yf4mn"]
+
+[ext_resource type="Script" path="res://scenes/tool_scenes/geom_maker/arbitrary_geom_maker.gd" id="1_iketc"]
+
+[sub_resource type="Environment" id="Environment_2diyl"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="Node" type="Node3D"]
+script = ExtResource("1_iketc")
+vertices = PackedVector3Array(5, 0, 0, 5, 0, 5, 4.6194, 0, 1.91342, 5, 0, 5, 3.53553, 0, 3.53553, 5, 0, 5, 1.91342, 0, 4.6194, 5, 0, 5, 3.06152e-16, 0, 5, 5, 0, 5, -1.91342, 0, 4.6194, 5, 0, 5, -3.53553, 0, 3.53553, 5, 0, 5, -4.6194, 0, 1.91342, 5, 0, 5, -5, 0, 6.12303e-16, 5, 0, 5, -4.6194, 0, -1.91342, 5, 0, 5, -3.53553, 0, -3.53553, 5, 0, 5, -1.91342, 0, -4.6194, 5, 0, 5, -9.18455e-16, 0, -5, 5, 0, 5, 1.91342, 0, -4.6194, 5, 0, 5, 3.53553, 0, -3.53553, 5, 0, 5, 4.6194, 0, -1.91342, 5, 0, 5, 5, 0, 0)
+mesh_type = 4
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2diyl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]

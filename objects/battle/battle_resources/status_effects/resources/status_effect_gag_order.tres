@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bc1chueh2m57j"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/toon_attacks/toon_attack.gd" id="1_4mmou"]
+[ext_resource type="Script" path="res://objects/battle/battle_resources/status_effects/status_effect_gag_ban.gd" id="2_pkvv5"]
+
+[resource]
+script = ExtResource("2_pkvv5")
+gags = Array[ExtResource("1_4mmou")]([])
+quality = 1
+rounds = 0
+icon_color = Color(1, 1, 1, 1)
+icon_scale = 1.0
+mini_icon_color = Color(1, 1, 1, 1)
+mini_icon_scale = 1.0
+visible = false
+description = "This is a Status Effect"
+status_name = "Gag Order"
+id = 17
+_generate_id = false

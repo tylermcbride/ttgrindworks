@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b77qp325baypa"]
+
+[ext_resource type="PackedScene" uid="uid://d20abt3jbvx3r" path="res://objects/items/custom/pink_slip/pink_slip_mod.tscn" id="1_6k08u"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="1_vhofi"]
+
+[resource]
+script = ExtResource("1_vhofi")
+qualitoon = 5
+qualitoon_rarity = 6
+evergreen = true
+realtime = false
+slot = 0
+world_scale = 2.0
+want_ui_spin = true
+ui_cam_offset = 0.0
+item_name = "Pink Slip"
+item_description = "Fire in the hole!"
+big_description = "Single-use item that one shots most Cogs."
+model = ExtResource("1_6k08u")
+stats_add = {
+"pink_slips": 1
+}
+stats_multiply = {}
+player_values = {}
+arbitrary_data = {}
+remember_item = false
+shop_category_title = "Consumable"
+shop_category_color = Color(0.105882, 0.54902, 0.537255, 1)
+force_show_shop_category = true

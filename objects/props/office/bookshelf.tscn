@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceghombqxco7o"]
+
+[ext_resource type="PackedScene" uid="uid://dp5ejyjjmcpwu" path="res://models/props/facility_objects/da_office/bookshelf/law_bookshelf.glb" id="1_3rfxt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ob3hy"]
+size = Vector3(2.65924, 1.92113, 0.457581)
+
+[node name="law_bookshelf" instance=ExtResource("1_3rfxt")]
+
+[node name="collision" parent="Law_bookcaseB" index="0"]
+visible = false
+
+[node name="shadow" parent="Law_bookcaseB" index="6"]
+transparency = 0.35
+
+[node name="Collision" type="StaticBody3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.695074, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0235291, 0.269783, -0.00216675)
+shape = SubResource("BoxShape3D_ob3hy")

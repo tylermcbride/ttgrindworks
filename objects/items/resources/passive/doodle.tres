@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://r5ubyo8osu6k"]
+
+[ext_resource type="PackedScene" uid="uid://cvqrdnwudqe35" path="res://objects/items/custom/doodle/doodle_item.tscn" id="1_six8q"]
+[ext_resource type="Script" path="res://objects/items/custom/doodle/doodle_script.gd" id="1_tr8a2"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="1_y5147"]
+
+[resource]
+script = ExtResource("1_y5147")
+qualitoon = 5
+qualitoon_rarity = 6
+evergreen = true
+realtime = true
+slot = 0
+world_scale = 1.0
+want_ui_spin = true
+ui_cam_offset = 0.0
+item_name = "Doodle"
+item_description = "Your new best friend!"
+big_description = "- Can dig up treasures
+- Provides additional buffs in battle
+- Is adorable"
+model = ExtResource("1_six8q")
+stats_add = {}
+stats_multiply = {}
+player_values = {}
+arbitrary_data = {}
+item_script = ExtResource("1_tr8a2")
+remember_item = true
+shop_category_title = "Special Item"
+shop_category_color = Color(0.60162, 0.201089, 1, 1)
+force_show_shop_category = true
+custom_shop_price = 45

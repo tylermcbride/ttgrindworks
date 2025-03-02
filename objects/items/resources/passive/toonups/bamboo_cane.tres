@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cp2b6gwnfjlib"]
+
+[ext_resource type="PackedScene" uid="uid://d4d0ila1f8k7o" path="res://objects/items/custom/toonups/cane_item.tscn" id="1_atcwe"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="2_syry0"]
+
+[resource]
+script = ExtResource("2_syry0")
+qualitoon = 1
+qualitoon_rarity = 2
+evergreen = true
+realtime = false
+slot = 0
+world_scale = 1.0
+want_ui_spin = true
+ui_cam_offset = 0.0
+item_name = "Bamboo Cane"
+item_description = "Evasiveness Boost"
+big_description = ""
+model = ExtResource("1_atcwe")
+stats_add = {}
+stats_multiply = {}
+player_values = {}
+arbitrary_data = {}
+remember_item = false
+shop_category_title = "Consumable"
+shop_category_color = Color(0.105882, 0.54902, 0.537255, 1)
+force_show_shop_category = true

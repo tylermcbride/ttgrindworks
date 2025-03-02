@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatusEffectGagImmunity" load_steps=2 format=3 uid="uid://syalbwxlbrg1"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/status_effects/gag_immunity.gd" id="1_v53hh"]
+
+[resource]
+script = ExtResource("1_v53hh")
+quality = 0
+rounds = -1
+requires_user = false
+visible = true
+description = "This is a Status Effect"
+id = 5
+_generate_id = false

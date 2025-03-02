@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dflwjcy6fj0av"]
+
+[ext_resource type="Script" path="res://objects/cog/cog.gd" id="1_datdb"]
+[ext_resource type="Resource" uid="uid://bnubj377geur5" path="res://objects/cog/presets/pools/grunt_cogs.tres" id="2_5kx02"]
+[ext_resource type="PackedScene" uid="uid://suibio7o1avg" path="res://objects/misc/drop_shadow/drop_shadow.tscn" id="9_bjhmd"]
+
+[node name="Cog" type="CharacterBody3D"]
+script = ExtResource("1_datdb")
+pool = ExtResource("2_5kx02")
+
+[node name="Body" type="Node3D" parent="."]
+transform = Transform3D(-0.3, 0, -2.62268e-08, 0, 0.3, 0, 2.62268e-08, 0, -0.3, 0, 0, 0)
+
+[node name="DropShadow" parent="Body" instance=ExtResource("9_bjhmd")]
+unique_name_in_owner = true
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0.0833333, 0)
+
+[node name="ReferenceCog" parent="." instance_placeholder="res://objects/cog/suita/suita.tscn"]
+transform = Transform3D(-0.3, 0, -2.62268e-08, 0, 0.3, 0, 2.62268e-08, 0, -0.3, 0, 0, 0)
+script = null
+
+[node name="CogDial" type="AudioStreamPlayer3D" parent="."]
+bus = &"SFX"

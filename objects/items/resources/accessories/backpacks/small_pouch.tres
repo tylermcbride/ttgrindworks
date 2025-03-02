@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="ItemAccessory" load_steps=9 format=3 uid="uid://dew5y5asdfaph"]
+
+[ext_resource type="Script" path="res://objects/items/classes/accessory_placement.gd" id="1_uh3i7"]
+[ext_resource type="Script" path="res://objects/items/classes/item_accessory.gd" id="2_8o5tv"]
+[ext_resource type="Script" path="res://objects/items/classes/body_placement.gd" id="2_31tyd"]
+[ext_resource type="PackedScene" uid="uid://dyt2v1jbi5msv" path="res://models/accessories/backpacks/standard_backpack/small_pouch.tscn" id="2_cd8nj"]
+[ext_resource type="Texture2D" uid="uid://kugb2ow550mk" path="res://models/accessories/backpacks/standard_backpack/small_pouch-pix-1.png" id="3_xvk3a"]
+
+[sub_resource type="Resource" id="Resource_6vjhu"]
+script = ExtResource("2_31tyd")
+body_type = 2
+position = Vector3(0.01, 0.69, -0.8)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(0.4, 0.4, 0.4)
+
+[sub_resource type="Resource" id="Resource_4scxt"]
+script = ExtResource("2_31tyd")
+body_type = 1
+position = Vector3(0.01, 0.35, -0.8)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(0.4, 0.4, 0.4)
+
+[sub_resource type="Resource" id="Resource_pj1q4"]
+script = ExtResource("2_31tyd")
+body_type = 0
+position = Vector3(0.11, 0.46, -1.03)
+rotation = Vector3(8.28, 0, 0)
+scale = Vector3(0.4, 0.4, 0.4)
+
+[resource]
+script = ExtResource("2_8o5tv")
+accessory_placements = Array[ExtResource("1_uh3i7")]([SubResource("Resource_6vjhu"), SubResource("Resource_4scxt"), SubResource("Resource_pj1q4")])
+qualitoon = 2
+qualitoon_rarity = 6
+evergreen = false
+realtime = false
+slot = 3
+world_scale = 0.15
+want_ui_spin = true
+ui_cam_offset = 0.0
+item_name = "Medium Pouch"
+item_description = "More storage space!"
+big_description = "Increases the gag point capacity to 15."
+model = ExtResource("2_cd8nj")
+stats_add = {
+"gag_cap": 5
+}
+stats_multiply = {}
+player_values = {}
+arbitrary_data = {}
+remember_item = true
+icon = ExtResource("3_xvk3a")
+shop_category_title = "Boost Item"
+shop_category_color = Color(0.196078, 0.580392, 0.917647, 1)
+force_show_shop_category = false
+custom_shop_price = 0

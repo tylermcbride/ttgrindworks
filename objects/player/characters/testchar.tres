@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=8 format=3 uid="uid://c6oqw7m6eh4yy"]
+
+[ext_resource type="Script" path="res://objects/player/character.gd" id="1_grtey"]
+[ext_resource type="Script" path="res://objects/battle/battle_resources/stats.gd" id="1_j1jpo"]
+[ext_resource type="Script" path="res://objects/toon/toon_dna.gd" id="1_t03ah"]
+[ext_resource type="Resource" uid="uid://tyi7ukxtvcgc" path="res://objects/battle/battle_resources/gag_loadouts/loadouts/standard_loadout.tres" id="2_w38qq"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="4_al6k5"]
+
+[sub_resource type="Resource" id="Resource_q3qk8"]
+script = ExtResource("1_j1jpo")
+damage = 1.0
+defense = 1.0
+evasiveness = 1.0
+accuracy = 1.0
+speed = 1.0
+max_turns = 3
+max_hp = 25
+hp = 25
+turns = 1
+
+[sub_resource type="Resource" id="Resource_gqohd"]
+script = ExtResource("1_t03ah")
+body_type = 1
+species = 2
+head_index = 0
+eyelashes = true
+skirt = true
+head_color = Color(1, 1, 1, 1)
+torso_color = Color(1, 1, 1, 1)
+leg_color = Color(1, 1, 1, 1)
+
+[resource]
+script = ExtResource("1_grtey")
+character_name = "RandomToon"
+character_summary = "- Stats are randomized
+- Gets one random item
+- Starts with 2 random tracks"
+dna = SubResource("Resource_gqohd")
+gag_loadout = ExtResource("2_w38qq")
+starting_laff = 30
+starting_items = Array[ExtResource("4_al6k5")]([])
+base_stats = SubResource("Resource_q3qk8")
+random_character_stored_name = ""

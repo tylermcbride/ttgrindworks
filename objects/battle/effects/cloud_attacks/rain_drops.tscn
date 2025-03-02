@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd8hmy8x3naei"]
+
+[ext_resource type="Texture2D" uid="uid://dagt56e2uov87" path="res://models/props/gags/storm_cloud/raindrop.png" id="1_c4yda"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qppbs"]
+emission_shape = 1
+emission_sphere_radius = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p4rs"]
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_c4yda")
+
+[sub_resource type="QuadMesh" id="QuadMesh_5hba7"]
+material = SubResource("StandardMaterial3D_6p4rs")
+size = Vector2(0.1, 0.1)
+
+[node name="RainDrops" type="GPUParticles3D"]
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_qppbs")
+draw_pass_1 = SubResource("QuadMesh_5hba7")

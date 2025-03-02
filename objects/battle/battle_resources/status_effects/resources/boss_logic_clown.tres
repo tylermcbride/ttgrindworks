@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://crpq72du32gfq"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/status_effects/boss_effects/boss_logic_clown.gd" id="1_1pc2s"]
+
+[resource]
+script = ExtResource("1_1pc2s")
+quality = 2
+rounds = -1
+icon_color = Color(1, 1, 1, 1)
+icon_scale = 1.0
+mini_icon_color = Color(1, 1, 1, 1)
+mini_icon_scale = 1.0
+visible = false
+description = "This is a Status Effect"
+status_name = "Status Effect"
+id = 33
+_generate_id = false

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FloorVariant" load_steps=9 format=3 uid="uid://dk64pnype64ch"]
+
+[ext_resource type="Script" path="res://objects/modules/facility_room.gd" id="1_6lg5s"]
+[ext_resource type="PackedScene" uid="uid://cpa5vpkfj7mq6" path="res://objects/modules/factory/variants/factory_clown_boss.tscn" id="1_am843"]
+[ext_resource type="Resource" uid="uid://c1kumm74qwmtf" path="res://scenes/game_floor/department_floors/rooms_sell.tres" id="1_g2dp2"]
+[ext_resource type="Script" path="res://scenes/game_floor/floor_variants/floor_variant.gd" id="1_w4gfx"]
+[ext_resource type="Script" path="res://scenes/game_floor/floor_modifiers/scripts/misc/floor_mod_all_fusion.gd" id="2_1ft4g"]
+[ext_resource type="Script" path="res://scenes/game_floor/floor_modifiers/scripts/misc/floor_mod_sbhq_sky.gd" id="2_61pcp"]
+[ext_resource type="Texture2D" uid="uid://bnvln6hkbsr3d" path="res://models/cogs/misc/hp_light/sell.png" id="2_djfgp"]
+
+[sub_resource type="Resource" id="Resource_nkyqb"]
+script = ExtResource("1_6lg5s")
+room = ExtResource("1_am843")
+rarity_weight = 1.0
+
+[resource]
+script = ExtResource("1_w4gfx")
+floor_difficulty = 0
+floor_type = ExtResource("1_g2dp2")
+floor_name = "The Faulty Factory"
+modifiers = Array[Script]([ExtResource("2_61pcp"), ExtResource("2_1ft4g")])
+end_rooms = Array[ExtResource("1_6lg5s")]([SubResource("Resource_nkyqb")])
+floor_icon = ExtResource("2_djfgp")

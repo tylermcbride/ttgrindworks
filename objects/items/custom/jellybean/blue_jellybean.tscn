@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dund3tktijhou"]
+
+[ext_resource type="PackedScene" uid="uid://dsj8qebkjj6wm" path="res://objects/items/custom/jellybean/red_jellybean.tscn" id="1_iytjn"]
+
+[node name="jellybean2" instance=ExtResource("1_iytjn")]
+bean_color = 4

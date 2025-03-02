@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://4tnucrksbplv"]
+
+[ext_resource type="Texture2D" uid="uid://dagt56e2uov87" path="res://models/props/gags/storm_cloud/raindrop.png" id="1_kv5qd"]
+[ext_resource type="Script" path="res://objects/battle/effects/unite/unite.gd" id="2_hhrvr"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hvd2s"]
+emission_shape = 2
+emission_sphere_radius = 1.0
+spread = 180.0
+initial_velocity_min = 5.0
+initial_velocity_max = 7.0
+gravity = Vector3(0, -20, 0)
+scale_min = 0.02
+scale_max = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4ukb"]
+transparency = 1
+albedo_color = Color(0.716933, 0.513, 0.95, 1)
+albedo_texture = ExtResource("1_kv5qd")
+
+[sub_resource type="QuadMesh" id="QuadMesh_usjp4"]
+material = SubResource("StandardMaterial3D_i4ukb")
+size = Vector2(4, 4)
+
+[node name="PaintSplash" type="GPUParticles3D"]
+emitting = false
+amount = 40
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_hvd2s")
+draw_pass_1 = SubResource("QuadMesh_usjp4")
+script = ExtResource("2_hhrvr")

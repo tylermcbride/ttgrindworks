@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="StatusEffectBKMentalMath" load_steps=3 format=3 uid="uid://bn288hkxr0yev"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/status_effects/boss_effects/status_effect_bk_mental_math.gd" id="1_dryc3"]
+[ext_resource type="Texture2D" uid="uid://bnvpueq5c4761" path="res://ui_assets/battle/statuses/mental_math.png" id="1_lurjh"]
+
+[resource]
+script = ExtResource("1_dryc3")
+wants_targeted = false
+quality = 0
+rounds = 0
+icon = ExtResource("1_lurjh")
+icon_color = Color(1, 1, 1, 1)
+icon_scale = 1.0
+mini_icon_color = Color(1, 1, 1, 1)
+mini_icon_scale = 1.0
+visible = true
+description = "The Bookkeeper is focusing! Do not target her."
+status_name = "Mental Math"
+id = 21
+_generate_id = false

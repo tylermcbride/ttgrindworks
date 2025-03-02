@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://be4btivsjwqhe"]
+
+[ext_resource type="PackedScene" uid="uid://eqtswktr1h3j" path="res://objects/items/custom/gag_voucher/gag_voucher.tscn" id="1_47fq5"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="2_gmhl7"]
+
+[resource]
+script = ExtResource("2_gmhl7")
+qualitoon = 2
+qualitoon_rarity = 6
+evergreen = true
+realtime = false
+slot = 0
+world_scale = 0.5
+want_ui_spin = true
+ui_cam_offset = 0.0
+item_name = "Gag Voucher"
+item_description = "Restock!"
+big_description = ""
+model = ExtResource("1_47fq5")
+stats_add = {}
+stats_multiply = {}
+player_values = {}
+arbitrary_data = {}
+remember_item = false
+shop_category_title = "Boost Item"
+shop_category_color = Color(0.196078, 0.580392, 0.917647, 1)
+force_show_shop_category = false

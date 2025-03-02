@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://vqyn38aio7i2"]
+
+[ext_resource type="PackedScene" uid="uid://461ajltncxsc" path="res://objects/modules/cgc/base_rooms/cgc_mole_room.tscn" id="1_oc3ju"]
+[ext_resource type="Script" path="res://objects/interactables/mole_stomp/mole_stomp.gd" id="2_ferxm"]
+[ext_resource type="PackedScene" uid="uid://dunq1mgh6t4kc" path="res://objects/interactables/chq_door/chq_door.tscn" id="3_0cw1j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8bf60"]
+size = Vector3(8.98352, 8.01105, 3.54165)
+
+[node name="mole_room" instance=ExtResource("1_oc3ju")]
+
+[node name="MoleStomp" type="Area3D" parent="." index="4" node_paths=PackedStringArray("door", "launch_cam")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.66192, -0.09, -8.22481)
+script = ExtResource("2_ferxm")
+game_time = 45.0
+door = NodePath("../CogDoor")
+launch_cam = NodePath("LaunchCam")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MoleStomp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91526, 4.091, 20.0156)
+shape = SubResource("BoxShape3D_8bf60")
+
+[node name="LaunchCam" type="Camera3D" parent="MoleStomp" index="1"]
+fov = 52.0
+
+[node name="CogDoor" parent="." index="5" instance=ExtResource("3_0cw1j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.7046, 0, -0.617949)

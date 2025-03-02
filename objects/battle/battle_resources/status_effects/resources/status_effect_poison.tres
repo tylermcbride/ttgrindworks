@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StatEffectPoison" load_steps=2 format=3 uid="uid://dtsw4nfjdp0s3"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/status_effects/status_effect_poison.gd" id="1_pesur"]
+
+[resource]
+script = ExtResource("1_pesur")
+amount = 0
+instant_effect = true
+quality = 1
+rounds = 1
+requires_user = false
+visible = true
+description = "This is a Status Effect"
+id = 11
+_generate_id = false

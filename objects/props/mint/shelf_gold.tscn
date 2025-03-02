@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://62mqao2o2egv"]
+
+[ext_resource type="PackedScene" uid="uid://ch40srx60of2j" path="res://models/props/facility_objects/mint/shelf/shelf_2.fbx" id="1_054yi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gj5iy"]
+size = Vector3(4.10889, 4.44043, 1.52594)
+
+[node name="shelf2" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.07791, -0.228497)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0241699, 0.111328, -0.0567932)
+shape = SubResource("BoxShape3D_gj5iy")
+
+[node name="shelf_2" parent="." instance=ExtResource("1_054yi")]
+transform = Transform3D(30.5, 0, 0, 0, 30.5, 0, 0, 0, 30.5, 0, 0, 0)
+
+[node name="collision" parent="shelf_2" index="1"]
+visible = false
+
+[editable path="shelf_2"]

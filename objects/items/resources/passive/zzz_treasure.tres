@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://duygfpffob40k"]
+
+[ext_resource type="Texture2D" uid="uid://cto8jw1fuwx" path="res://objects/items/custom/treasure/zzz.png" id="1_qehgf"]
+[ext_resource type="PackedScene" uid="uid://bmkdj1ocsunjm" path="res://objects/items/custom/treasure/treasure.tscn" id="2_s2tpi"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="3_0fblb"]
+[ext_resource type="AudioStream" uid="uid://xd35cu8acybx" path="res://audio/sfx/battle/gags/toonup/sparkly.ogg" id="3_835fy"]
+
+[resource]
+script = ExtResource("3_0fblb")
+qualitoon = 4
+qualitoon_rarity = 6
+evergreen = true
+realtime = false
+slot = 0
+world_scale = 0.5
+want_ui_spin = true
+ui_cam_offset = 0.0
+item_name = "Sleepy Treasure"
+item_description = "You feel fully refreshed!"
+big_description = "Heals %d percent of your max laff!"
+model = ExtResource("2_s2tpi")
+pickup_sfx = ExtResource("3_835fy")
+stats_add = {}
+stats_multiply = {}
+player_values = {}
+arbitrary_data = {
+"heal_perc": 100,
+"texture": ExtResource("1_qehgf")
+}
+remember_item = false
+shop_category_title = "Boost Item"
+shop_category_color = Color(0.196078, 0.580392, 0.917647, 1)
+force_show_shop_category = false
+custom_shop_price = 0

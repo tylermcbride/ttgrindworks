@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvslagwd6sk4r"]
+
+[ext_resource type="PackedScene" uid="uid://bbrbj5ev7j0tl" path="res://models/props/toon_props/shop_counter/shop_counter.fbx" id="1_7jwor"]
+
+[node name="shop_counter" instance=ExtResource("1_7jwor")]
+
+[node name="g2" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.5389, 0, 0)

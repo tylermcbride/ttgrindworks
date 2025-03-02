@@ -1,0 +1,272 @@
+[gd_scene load_steps=33 format=3 uid="uid://wpoc3xs1yy0"]
+
+[ext_resource type="Script" path="res://objects/player/player.gd" id="1_nexlg"]
+[ext_resource type="Script" path="res://objects/battle/battle_resources/stats.gd" id="2_mf0eg"]
+[ext_resource type="Script" path="res://objects/toon/clothing/toon_bottoms.gd" id="3_h0xpu"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="3_hfcpd"]
+[ext_resource type="Script" path="res://objects/player/player_stats.gd" id="4_f7fek"]
+[ext_resource type="Script" path="res://objects/quests/quest.gd" id="4_flein"]
+[ext_resource type="Texture2D" uid="uid://v0n7tknvy2jk" path="res://models/toon/textures/clothes/shorts/desat_shorts_10_2.png" id="4_rtbea"]
+[ext_resource type="PackedScene" uid="uid://b4tvnlm52jblo" path="res://objects/items/ui/item_descriptions/item_description.tscn" id="5_ajyaa"]
+[ext_resource type="PackedScene" uid="uid://cy4iox7mj5ei0" path="res://objects/toon/toon.tscn" id="5_ryhr4"]
+[ext_resource type="Script" path="res://objects/toon/toon_dna.gd" id="5_wb3eg"]
+[ext_resource type="PackedScene" uid="uid://cumojo4vtowmv" path="res://objects/toon/laff_meter.tscn" id="6_553ug"]
+[ext_resource type="Script" path="res://objects/toon/clothing/toon_shirt.gd" id="6_l82lg"]
+[ext_resource type="Texture2D" uid="uid://c4qvk4ssy1c0n" path="res://models/toon/textures/clothes/shirts/desat_shirt_4.png" id="7_vfl64"]
+[ext_resource type="Texture2D" uid="uid://cdawen500xuqx" path="res://models/toon/textures/clothes/shirts/desat_sleeve_4.png" id="8_bwbup"]
+[ext_resource type="PackedScene" uid="uid://bvnev7qmiu3dq" path="res://objects/general_ui/bean_jar/bean_jar.tscn" id="9_2bgkf"]
+[ext_resource type="Resource" uid="uid://tyi7ukxtvcgc" path="res://objects/battle/battle_resources/gag_loadouts/loadouts/standard_loadout.tres" id="9_cak40"]
+[ext_resource type="Script" path="res://objects/player/character.gd" id="10_7fcej"]
+[ext_resource type="Resource" uid="uid://cyiwxplege133" path="res://objects/items/resources/passive/emergency_unite.tres" id="12_sveqr"]
+[ext_resource type="PackedScene" uid="uid://b8xccla84x6gh" path="res://objects/quests/quest_notification/quest_notification.tscn" id="19_2bvb5"]
+[ext_resource type="FontFile" uid="uid://cup2yr5w7or1l" path="res://fonts/Minnie.TTF" id="20_fnojw"]
+[ext_resource type="Script" path="res://objects/player/floor_label.gd" id="21_dh5ch"]
+[ext_resource type="PackedScene" uid="uid://5hvtmu8sf5ub" path="res://objects/player/ui/timer/game_timer.tscn" id="22_0c65h"]
+[ext_resource type="Script" path="res://objects/player/boost_text_queue.gd" id="23_468de"]
+
+[sub_resource type="Resource" id="Resource_jj61k"]
+script = ExtResource("2_mf0eg")
+damage = 1.0
+defense = 1.0
+evasiveness = 1.0
+accuracy = 1.0
+speed = 1.0
+max_turns = 3
+max_hp = 25
+hp = 25
+turns = 1
+
+[sub_resource type="Resource" id="Resource_ugrs1"]
+script = ExtResource("3_h0xpu")
+texture = ExtResource("4_rtbea")
+base_color = Color(0.71, 0.231, 0.435, 1)
+color_type = 0
+
+[sub_resource type="Resource" id="Resource_2lryd"]
+script = ExtResource("6_l82lg")
+shirt_texture = ExtResource("7_vfl64")
+sleeve_texture = ExtResource("8_bwbup")
+base_color = Color(0.992157, 0.478431, 0.168627, 1)
+sleeve_color = Color(0.992157, 0.478431, 0.168627, 1)
+color_type = 0
+
+[sub_resource type="Resource" id="Resource_e5n6o"]
+script = ExtResource("5_wb3eg")
+body_type = 1
+species = 2
+head_index = 2
+eyelashes = false
+skirt = false
+head_color = Color(0.345098, 0.819608, 0.952941, 1)
+torso_color = Color(0.345098, 0.819608, 0.952941, 1)
+leg_color = Color(0.345098, 0.819608, 0.952941, 1)
+shirt = SubResource("Resource_2lryd")
+bottoms = SubResource("Resource_ugrs1")
+
+[sub_resource type="Resource" id="Resource_e5olc"]
+script = ExtResource("10_7fcej")
+character_name = "Flippy"
+character_summary = "- Can revive once before going sad
+- 5% base Throw boost
+- Starts with Toon-Up and Throw"
+dna = SubResource("Resource_e5n6o")
+gag_loadout = ExtResource("9_cak40")
+starting_laff = 25
+starting_items = Array[ExtResource("3_hfcpd")]([ExtResource("12_sveqr")])
+base_stats = SubResource("Resource_jj61k")
+random_character_stored_name = ""
+
+[sub_resource type="Resource" id="Resource_wdmji"]
+script = ExtResource("4_f7fek")
+money = 55
+items = Array[ExtResource("3_hfcpd")]([])
+gags_unlocked = {
+"Drop": 7.0,
+"Lure": 7.0,
+"Sound": 7.0,
+"Squirt": 7.0,
+"Throw": 7.0,
+"Trap": 7.0
+}
+gag_balance = {
+"Drop": 10.0,
+"Lure": 10.0,
+"Sound": 10.0,
+"Squirt": 10.0,
+"Throw": 10.0,
+"Trap": 10.0
+}
+gag_effectiveness = {
+"Drop": 1.0,
+"Lure": 1.0,
+"Sound": 1.0,
+"Squirt": 1.0,
+"Throw": 1.05,
+"Trap": 1.0
+}
+gag_regeneration = {
+"Drop": 5.0,
+"Lure": 5.0,
+"Sound": 5.0,
+"Squirt": 5.0,
+"Throw": 5.0,
+"Trap": 5.0
+}
+gag_vouchers = {
+"Drop": 1.0,
+"Lure": 1.0,
+"Sound": 1.0,
+"Squirt": 1.0,
+"Throw": 1.0,
+"Trap": 1.0
+}
+toonups = {
+0: 1,
+1: 1,
+2: 1,
+3: 1,
+4: 1,
+5: 1,
+6: 0
+}
+gag_cap = 100
+gag_discount = -1
+character = SubResource("Resource_e5olc")
+quests = Array[ExtResource("4_flein")]([])
+quest_rerolls = 3
+pink_slips = 10
+luck = 1.0
+crit_mult = 1.25
+mod_cog_dmg_mult = 1.0
+shop_discount = 0
+throw_heal_boost = 0.15
+squirt_defense_boost = 0.8
+drop_aftershock_round_boost = 0
+anomaly_boost = 0
+extra_lives = 0
+sellbot_boost = 1.0
+cashbot_boost = 1.0
+lawbot_boost = 1.0
+bossbot_boost = 1.0
+proxy_chance_boost = 0.0
+damage = 2.0
+defense = 1.2
+evasiveness = 1.1
+accuracy = 1.5
+speed = 1.1
+max_turns = 3
+max_hp = 100
+hp = 70
+turns = 3
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3sqh5"]
+radius = 0.292689
+height = 1.12841
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_6nfhs"]
+length = 0.05
+
+[sub_resource type="LabelSettings" id="LabelSettings_530nt"]
+font = ExtResource("20_fnojw")
+font_size = 24
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("head_node")]
+collision_layer = 6
+collision_mask = 5
+floor_max_angle = 1.309
+script = ExtResource("1_nexlg")
+stats = SubResource("Resource_wdmji")
+head_node = NodePath("Head")
+
+[node name="Toon" parent="." instance=ExtResource("5_ryhr4")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564, 0)
+shape = SubResource("CapsuleShape3D_3sqh5")
+
+[node name="SpringArm" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06085, 0)
+shape = SubResource("SeparationRayShape3D_6nfhs")
+spring_length = 2.5
+
+[node name="Camera" type="Camera3D" parent="SpringArm"]
+current = true
+fov = 52.0
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.920243, 0)
+
+[node name="MoveSFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="ItemDescriptions" parent="." instance=ExtResource("5_ajyaa")]
+visible = false
+
+[node name="LaffMeter" parent="." instance=ExtResource("6_553ug")]
+anchors_preset = 2
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -111.0
+offset_right = 100.0
+offset_bottom = -21.0
+grow_horizontal = 1
+grow_vertical = 0
+scale = Vector2(1.2, 1.2)
+
+[node name="BeanJar" parent="." instance=ExtResource("9_2bgkf")]
+anchors_preset = 2
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -228.0
+offset_right = 115.0
+offset_bottom = -103.0
+grow_horizontal = 1
+grow_vertical = 0
+scale = Vector2(0.85, 0.85)
+pivot_offset = Vector2(50, 62.5)
+
+[node name="Items" type="Node" parent="."]
+
+[node name="QuestNotification" parent="." instance=ExtResource("19_2bvb5")]
+
+[node name="FloorLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -30.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Floor 0"
+label_settings = SubResource("LabelSettings_530nt")
+horizontal_alignment = 2
+script = ExtResource("21_dh5ch")
+
+[node name="GameTimer" parent="." instance=ExtResource("22_0c65h")]
+visible = false
+
+[node name="BoostTextQueue" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -68.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("23_468de")

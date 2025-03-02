@@ -1,0 +1,108 @@
+[gd_scene load_steps=21 format=3 uid="uid://d0lb5hhynsva"]
+
+[ext_resource type="PackedScene" uid="uid://srxbjtdik0jv" path="res://objects/modules/mint/base_rooms/mint_skele_room2.tscn" id="1_e4mjb"]
+[ext_resource type="Texture2D" uid="uid://dot2xcb1ym0nw" path="res://models/facilities/office/textures/LB_WoodPanel2.png" id="2_803l1"]
+[ext_resource type="Texture2D" uid="uid://c22vsww70r3wa" path="res://models/facilities/office/textures/CementFloor7.png" id="3_43k6f"]
+[ext_resource type="PackedScene" uid="uid://ciesu8xyj70oc" path="res://objects/interactables/shop/toon_shop.tscn" id="4_baetj"]
+[ext_resource type="PackedScene" uid="uid://cy4iox7mj5ei0" path="res://objects/toon/toon.tscn" id="5_1cp6r"]
+[ext_resource type="Script" path="res://objects/toon/toon_dna.gd" id="6_u71u8"]
+[ext_resource type="PackedScene" uid="uid://drmdabed2lrwg" path="res://objects/props/etc/board_sign/board_sign.tscn" id="7_rwltc"]
+[ext_resource type="PackedScene" uid="uid://dm86vgodo58fx" path="res://objects/props/office/potted_plant.tscn" id="8_fan8s"]
+[ext_resource type="PackedScene" uid="uid://bolaea3btm1ae" path="res://objects/props/office/da_crate.tscn" id="8_uk8fh"]
+[ext_resource type="PackedScene" uid="uid://cng3jffjmwdv8" path="res://objects/props/office/couch.tscn" id="9_aa1ed"]
+[ext_resource type="PackedScene" uid="uid://duuriwh75afua" path="res://objects/props/mint/mint_crate.tscn" id="10_5w35r"]
+[ext_resource type="Texture2D" uid="uid://c5yixfywnak2t" path="res://models/facilities/office/textures/LB_Ceiling3.png" id="10_fjfbm"]
+[ext_resource type="PackedScene" uid="uid://cnpgawnj8vd27" path="res://objects/props/etc/radio/radio.tscn" id="11_h7o4r"]
+[ext_resource type="PackedScene" uid="uid://d0bnakgqatchq" path="res://objects/props/office/lamp_big.tscn" id="12_4kif0"]
+[ext_resource type="PackedScene" uid="uid://7l1mxomebm5y" path="res://objects/props/office/gavel.tscn" id="13_5bmm6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7f3ti"]
+resource_name = "textures:textures1:textures:CashBotLocomotive_v2_s3:LMtopFix:LMSidePanels_SHD"
+albedo_color = Color(0.905882, 0.905882, 0.905882, 1)
+albedo_texture = ExtResource("2_803l1")
+emission_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n44ew"]
+resource_name = "BoilerRoomT_CementFloorx4"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.905882, 0.905882, 0.905882, 1)
+albedo_texture = ExtResource("3_43k6f")
+emission_enabled = true
+
+[sub_resource type="Resource" id="Resource_w6pw1"]
+script = ExtResource("6_u71u8")
+body_type = 0
+species = 2
+head_index = 0
+eyelashes = true
+skirt = false
+head_color = Color(1, 1, 1, 1)
+torso_color = Color(1, 1, 1, 1)
+leg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxfyj"]
+albedo_texture = ExtResource("10_fjfbm")
+uv1_scale = Vector3(10.315, 10.13, 10)
+uv1_offset = Vector3(-0.315, -0.14, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xdo8h"]
+material = SubResource("StandardMaterial3D_gxfyj")
+
+[node name="Root Scene" instance=ExtResource("1_e4mjb")]
+
+[node name="GeometryTransformHelper6" parent="Z18a_ALL/Z18/connector/room/geometry_connector/wall" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7f3ti")
+
+[node name="GeometryTransformHelper7" parent="Z18a_ALL/Z18/connector/room/geometry_connector/floor" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_n44ew")
+
+[node name="Shop" type="Node3D" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247614, 0, -5.45023)
+
+[node name="Toon" parent="Shop" index="0" instance=ExtResource("5_1cp6r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.546352)
+toon_dna = SubResource("Resource_w6pw1")
+auto_build = true
+
+[node name="BoardSign" parent="Shop" index="1" instance=ExtResource("7_rwltc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.36735, -1.59418)
+
+[node name="da_crate" parent="Shop" index="2" instance=ExtResource("8_uk8fh")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -3.08978, 0.00179243, -0.621513)
+
+[node name="potted_plant" parent="Shop/da_crate" index="1" instance=ExtResource("8_fan8s")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -0.00858569, 1.65767, 0.0849319)
+
+[node name="da_crate2" parent="Shop" index="3" instance=ExtResource("8_uk8fh")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 2.893, 0.00179243, -0.621513)
+
+[node name="potted_plant" parent="Shop/da_crate2" index="1" instance=ExtResource("8_fan8s")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -0.00456858, 1.66878, 0.12431)
+
+[node name="shop_counter" parent="Shop" index="4" node_paths=PackedStringArray("toon") instance=ExtResource("4_baetj")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.235705, 0, 0.43947)
+toon = NodePath("../Toon")
+
+[node name="mint_crate" parent="Shop" index="5" instance=ExtResource("10_5w35r")]
+transform = Transform3D(-0.4, 0, -3.49691e-08, 0, 0.4, 0, 3.49691e-08, 0, -0.4, -1.43309, 0, -1.16297)
+
+[node name="radio" parent="Shop/mint_crate" index="1" instance=ExtResource("11_h7o4r")]
+transform = Transform3D(-2.5, 0, -2.18557e-07, 0, 2.5, 0, 2.18557e-07, 0, -2.5, 0.00894141, 1.67461, -0.00341606)
+
+[node name="CustomCeiling" type="MeshInstance3D" parent="." index="11"]
+transform = Transform3D(6.855, 0, 0, 0, -6.855, 1.03508e-06, 0, -1.03508e-06, -6.855, 0, 8.94806, 0)
+mesh = SubResource("PlaneMesh_xdo8h")
+
+[node name="Props" type="Node3D" parent="." index="12"]
+
+[node name="couch" parent="Props" index="0" instance=ExtResource("9_aa1ed")]
+transform = Transform3D(-1.25, 0, -1.88745e-07, 0, 1.25, 0, 1.88745e-07, 0, -1.25, -3.94718, 0.0031823, 6.04792)
+
+[node name="lamp_big" parent="Props" index="1" instance=ExtResource("12_4kif0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.35959, 0, -6.12312)
+
+[node name="lamp_big2" parent="Props" index="2" instance=ExtResource("12_4kif0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.50495, 0, -6.12312)
+
+[node name="gavel" parent="Props" index="3" instance=ExtResource("13_5bmm6")]
+transform = Transform3D(7.25376e-08, -2.2871e-08, 1.74, -0.523228, -1.65947, 4.42502e-16, 1.65947, -0.523228, -7.60578e-08, 4.598, 4.723, 6.355)

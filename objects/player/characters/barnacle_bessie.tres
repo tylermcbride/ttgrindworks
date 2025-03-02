@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=16 format=3 uid="uid://bgid3wnjubxl"]
+
+[ext_resource type="Script" path="res://objects/toon/toon_dna.gd" id="1_5k5p5"]
+[ext_resource type="Script" path="res://objects/battle/battle_resources/stats.gd" id="1_26hj0"]
+[ext_resource type="Script" path="res://objects/toon/clothing/toon_bottoms.gd" id="1_pw78h"]
+[ext_resource type="Script" path="res://objects/player/character.gd" id="1_xj5vs"]
+[ext_resource type="Texture2D" uid="uid://dcvoe886vi37s" path="res://models/toon/textures/clothes/skirts/desat_skirt_2_1.png" id="2_0vge1"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="3_2km26"]
+[ext_resource type="Script" path="res://objects/toon/clothing/toon_shirt.gd" id="4_oph4g"]
+[ext_resource type="Texture2D" uid="uid://l5nmqw1hw5ti" path="res://models/toon/textures/clothes/shirts/desat_shirt_2_2.png" id="5_gjuvs"]
+[ext_resource type="Texture2D" uid="uid://dp1mwoshkp6pb" path="res://models/toon/textures/clothes/shirts/desat_sleeve_2_1.png" id="6_bmcq1"]
+[ext_resource type="Resource" uid="uid://oromnsmw0dhr" path="res://objects/battle/battle_resources/gag_loadouts/loadouts/bessie_loadout.tres" id="8_vetyy"]
+[ext_resource type="Resource" uid="uid://w2jk7lsyrodm" path="res://objects/items/resources/passive/bessie_boost.tres" id="11_yb4tn"]
+
+[sub_resource type="Resource" id="Resource_4mp7f"]
+script = ExtResource("1_26hj0")
+damage = 0.75
+defense = 1.1
+evasiveness = 1.05
+accuracy = 1.0
+speed = 1.0
+max_turns = 3
+max_hp = 25
+hp = 25
+turns = 1
+
+[sub_resource type="Resource" id="Resource_2bsmm"]
+script = ExtResource("1_pw78h")
+texture = ExtResource("2_0vge1")
+base_color = Color(0.545098, 0.282353, 0.74902, 1)
+color_type = 0
+
+[sub_resource type="Resource" id="Resource_17x8t"]
+script = ExtResource("4_oph4g")
+shirt_texture = ExtResource("5_gjuvs")
+sleeve_texture = ExtResource("6_bmcq1")
+base_color = Color(0.545098, 0.282353, 0.74902, 1)
+sleeve_color = Color(0.545098, 0.282353, 0.74902, 1)
+color_type = 0
+
+[sub_resource type="Resource" id="Resource_ppw05"]
+script = ExtResource("1_5k5p5")
+body_type = 2
+species = 3
+head_index = 2
+eyelashes = true
+skirt = true
+head_color = Color(0.54902, 0.823529, 0.321569, 1)
+torso_color = Color(0.54902, 0.823529, 0.321569, 1)
+leg_color = Color(0.54902, 0.823529, 0.321569, 1)
+shirt = SubResource("Resource_17x8t")
+bottoms = SubResource("Resource_2bsmm")
+
+[resource]
+script = ExtResource("1_xj5vs")
+character_name = "Barnacle Bessie"
+character_summary = "- 25% less damage
+- Dropless
+- Drop will auto-target random Cogs
+  at the beginning of the round
+- Starts with Squirt and Lure"
+dna = SubResource("Resource_ppw05")
+gag_loadout = ExtResource("8_vetyy")
+starting_laff = 30
+starting_items = Array[ExtResource("3_2km26")]([ExtResource("11_yb4tn")])
+base_stats = SubResource("Resource_4mp7f")
+random_character_stored_name = ""

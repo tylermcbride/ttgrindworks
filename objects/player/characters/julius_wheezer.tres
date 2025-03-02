@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="PlayerCharacter" load_steps=16 format=3 uid="uid://tyb5e6c0ye3g"]
+
+[ext_resource type="Script" path="res://objects/toon/toon_dna.gd" id="1_54mk4"]
+[ext_resource type="Script" path="res://objects/battle/battle_resources/stats.gd" id="1_78iuq"]
+[ext_resource type="Script" path="res://objects/toon/clothing/toon_bottoms.gd" id="1_bbuj5"]
+[ext_resource type="Script" path="res://objects/player/character.gd" id="1_iej7q"]
+[ext_resource type="Texture2D" uid="uid://ugrsb3nsmlt4" path="res://models/toon/textures/clothes/shorts/desat_shorts_1_5.png" id="2_nj2dx"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="3_rh3j8"]
+[ext_resource type="Script" path="res://objects/toon/clothing/toon_shirt.gd" id="4_34xi2"]
+[ext_resource type="Texture2D" uid="uid://l5nmqw1hw5ti" path="res://models/toon/textures/clothes/shirts/desat_shirt_2_2.png" id="5_sfh2a"]
+[ext_resource type="Texture2D" uid="uid://dp1mwoshkp6pb" path="res://models/toon/textures/clothes/shirts/desat_sleeve_2_1.png" id="6_gac4x"]
+[ext_resource type="Resource" uid="uid://tyi7ukxtvcgc" path="res://objects/battle/battle_resources/gag_loadouts/loadouts/standard_loadout.tres" id="7_o5usb"]
+[ext_resource type="Resource" uid="uid://bevjc7i6h0087" path="res://objects/items/resources/passive/wheezer_crit.tres" id="11_t28kn"]
+
+[sub_resource type="Resource" id="Resource_7c7yh"]
+script = ExtResource("1_78iuq")
+damage = 0.75
+defense = 0.9
+evasiveness = 1.2
+accuracy = 1.0
+speed = 1.05
+max_turns = 3
+max_hp = 25
+hp = 25
+turns = 1
+
+[sub_resource type="Resource" id="Resource_d7b1v"]
+script = ExtResource("1_bbuj5")
+texture = ExtResource("2_nj2dx")
+base_color = Color(0.639216, 0.352941, 0.266667, 1)
+color_type = 0
+
+[sub_resource type="Resource" id="Resource_njtry"]
+script = ExtResource("4_34xi2")
+shirt_texture = ExtResource("5_sfh2a")
+sleeve_texture = ExtResource("6_gac4x")
+base_color = Color(0.862745, 0.403922, 0.415686, 1)
+sleeve_color = Color(0.862745, 0.403922, 0.415686, 1)
+color_type = 0
+
+[sub_resource type="Resource" id="Resource_3onu7"]
+script = ExtResource("1_54mk4")
+body_type = 1
+species = 6
+head_index = 1
+eyelashes = false
+skirt = false
+head_color = Color(0.192157, 0.560784, 0.772549, 1)
+torso_color = Color(0.192157, 0.560784, 0.772549, 1)
+leg_color = Color(0.192157, 0.560784, 0.772549, 1)
+shirt = SubResource("Resource_njtry")
+bottoms = SubResource("Resource_d7b1v")
+
+[resource]
+script = ExtResource("1_iej7q")
+character_name = "Julius Wheezer"
+character_summary = "- 25% less damage, 25% more luck
+- Crits are twice as effective
+- Green tracks always crit
+- Red tracks never crit
+- Starts with all tracks"
+dna = SubResource("Resource_3onu7")
+gag_loadout = ExtResource("7_o5usb")
+starting_laff = 30
+starting_items = Array[ExtResource("3_rh3j8")]([ExtResource("11_t28kn")])
+base_stats = SubResource("Resource_7c7yh")
+random_character_stored_name = ""

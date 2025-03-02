@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c5cavaivrrvb"]
+
+[ext_resource type="PackedScene" uid="uid://cp3jaujrj4tyk" path="res://objects/items/custom/toonups/feather_item.tscn" id="2_32jj2"]
+[ext_resource type="Script" path="res://objects/items/classes/item.gd" id="3_l5yp1"]
+
+[resource]
+script = ExtResource("3_l5yp1")
+qualitoon = 1
+qualitoon_rarity = 2
+evergreen = true
+realtime = false
+slot = 0
+world_scale = 0.28
+want_ui_spin = true
+ui_cam_offset = 0.0
+item_name = "Feather"
+item_description = "Defense Boost"
+big_description = ""
+model = ExtResource("2_32jj2")
+stats_add = {}
+stats_multiply = {}
+player_values = {}
+arbitrary_data = {}
+remember_item = false
+shop_category_title = "Consumable"
+shop_category_color = Color(0.104989, 0.549618, 0.538348, 1)
+force_show_shop_category = true
+custom_shop_price = 0

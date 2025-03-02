@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://diycwprjw6sid"]
+
+[ext_resource type="Script" path="res://objects/battle/battle_resources/misc_movies/traffic_manager/green_light.gd" id="1_xec7x"]
+
+[resource]
+script = ExtResource("1_xec7x")
+accuracy = 75
+damage = 10
+ignore_stats = false
+summary = "Traffic Manager requires certain tracks!"
+attack_lines = Array[String](["What I say goes.", "Now I'm in control.", "You'll have to fit into MY schedule."])
+target_type = 0
+action_name = "Green Light"
+one_time_use = false

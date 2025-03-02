@@ -1,0 +1,539 @@
+[gd_scene load_steps=87 format=3 uid="uid://cha3dccp1m281"]
+
+[ext_resource type="PackedScene" uid="uid://d1qs8nf0s0y85" path="res://objects/general_ui/ui_panel/ui_panel.tscn" id="1_py1ix"]
+[ext_resource type="Script" path="res://scenes/title_screen/credits/credits_panel.gd" id="2_3oeyj"]
+[ext_resource type="Texture2D" uid="uid://c1u45a4o8oyty" path="res://icon.svg" id="2_s4vxw"]
+[ext_resource type="FontFile" uid="uid://815gwlftl5ik" path="res://fonts/impress-bt.ttf" id="3_8rgp0"]
+[ext_resource type="Script" path="res://scenes/title_screen/credits/game_credit.gd" id="3_ksngi"]
+[ext_resource type="Texture2D" uid="uid://c66ylu6x3jihn" path="res://scenes/title_screen/credits/icons/icon_evan.jpg" id="4_h6qo8"]
+[ext_resource type="Texture2D" uid="uid://cvyhl11ep7ahe" path="res://scenes/title_screen/credits/icons/icon_buck.png" id="4_hafue"]
+[ext_resource type="Texture2D" uid="uid://ctkpc50wxpiya" path="res://scenes/title_screen/credits/icons/icon_loonatic.jpg" id="5_n30h7"]
+[ext_resource type="Texture2D" uid="uid://bc4r4ehhtk5q5" path="res://scenes/title_screen/credits/icons/icon_lav.jpg" id="6_sndmm"]
+[ext_resource type="Texture2D" uid="uid://deseqjtcy8y0c" path="res://scenes/title_screen/credits/icons/icon_kel.jpg" id="7_18ybd"]
+[ext_resource type="Texture2D" uid="uid://ncxhietbcbe0" path="res://scenes/title_screen/credits/icons/icon_eli.jpg" id="8_igbbe"]
+[ext_resource type="Texture2D" uid="uid://cd4y1a6cujeqn" path="res://scenes/title_screen/credits/icons/icon_unfinished.jpg" id="9_efc6d"]
+[ext_resource type="Texture2D" uid="uid://cvgtofwbt0km0" path="res://scenes/title_screen/credits/icons/icon_elisei.jpg" id="10_ulfld"]
+[ext_resource type="Texture2D" uid="uid://vks8vogr7xe7" path="res://scenes/title_screen/credits/icons/icon_jake.jpg" id="11_bjiit"]
+[ext_resource type="Texture2D" uid="uid://cjsm27bt12pp3" path="res://scenes/title_screen/credits/icons/icon_supergoose.jpg" id="12_ed774"]
+[ext_resource type="Texture2D" uid="uid://4akr1gdn66rb" path="res://scenes/title_screen/credits/icons/icon_neo.png" id="12_fxlu6"]
+[ext_resource type="Texture2D" uid="uid://c578yaohk6yds" path="res://scenes/title_screen/credits/icons/icon_niko.jpg" id="13_jkk5t"]
+[ext_resource type="Texture2D" uid="uid://dp635llkm2o8" path="res://scenes/title_screen/credits/icons/icon_raine.png" id="14_n64th"]
+[ext_resource type="Texture2D" uid="uid://bkmrf3ukawv1q" path="res://scenes/title_screen/credits/icons/icon_greetings.jpg" id="14_ronfa"]
+[ext_resource type="Texture2D" uid="uid://dm27n5rcm3txl" path="res://scenes/title_screen/credits/icons/icon_misty.jpg" id="15_bvjdg"]
+[ext_resource type="Texture2D" uid="uid://cntsw6dq7qa1m" path="res://scenes/title_screen/credits/icons/icon_sketched.jpg" id="16_byarp"]
+[ext_resource type="Texture2D" uid="uid://uxtakxpjqdwr" path="res://scenes/title_screen/credits/icons/icon_goat.png" id="17_i8d8j"]
+[ext_resource type="Texture2D" uid="uid://bjga653jb1eoe" path="res://scenes/title_screen/credits/icons/icon_blu.png" id="17_k5w5c"]
+[ext_resource type="Texture2D" uid="uid://bj1y1uiss30dg" path="res://scenes/title_screen/credits/icons/icon_john.png" id="18_b78ew"]
+[ext_resource type="Texture2D" uid="uid://ds2d6m1x2dare" path="res://scenes/title_screen/credits/icons/icon_stuck.jpg" id="18_jfa0w"]
+[ext_resource type="Texture2D" uid="uid://8xbitr75p1tp" path="res://scenes/title_screen/credits/icons/icon_evh.jpg" id="19_12m3w"]
+[ext_resource type="Texture2D" uid="uid://2irere7p5yay" path="res://scenes/title_screen/credits/icons/icon_you.png" id="22_x0h0m"]
+[ext_resource type="PackedScene" uid="uid://b0d1er4oqiqcn" path="res://objects/general_ui/general_button/general_button.tscn" id="23_dkcqs"]
+[ext_resource type="Texture2D" uid="uid://cfrtoxhs6fotd" path="res://scenes/title_screen/credits/icons/icon_boots.jpg" id="23_m1mdq"]
+[ext_resource type="FontFile" uid="uid://cup2yr5w7or1l" path="res://fonts/Minnie.TTF" id="23_ts00s"]
+[ext_resource type="Theme" uid="uid://dhqxwi6busihb" path="res://objects/general_ui/settings_menu/slider_theme.tres" id="24_gujno"]
+[ext_resource type="Texture2D" uid="uid://ddcktpjy3gdew" path="res://ui_assets/misc/uiAccessoryDelete_up.png" id="24_kw4b7"]
+[ext_resource type="Texture2D" uid="uid://decaeba2ox0yf" path="res://scenes/title_screen/credits/icons/icon_moth.png" id="24_q8jnd"]
+[ext_resource type="Texture2D" uid="uid://b7ri5sq021cvo" path="res://ui_assets/misc/uiAccessoryDelete_down.png" id="25_o5hyb"]
+[ext_resource type="Texture2D" uid="uid://dn8vndd37lqom" path="res://ui_assets/misc/uiAccessoryDelete_rollover.png" id="26_vw3sy"]
+[ext_resource type="Texture2D" uid="uid://ngsvdsnhp76n" path="res://scenes/title_screen/credits/icons/icon_sandy.png" id="27_xwo8y"]
+[ext_resource type="Texture2D" uid="uid://cyuwqr76tu2ae" path="res://scenes/title_screen/credits/icons/icon_trd.png" id="29_p23p7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yadbj"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0, 0.283333, 1, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0, 0.0253333, 0.19, 0.501961)
+
+[sub_resource type="Resource" id="Resource_ttvt2"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("4_h6qo8")
+name = "Evan"
+role = "Project Lead, Programmer & Designer"
+label_settings = SubResource("LabelSettings_yadbj")
+
+[sub_resource type="LabelSettings" id="LabelSettings_r8ymr"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.211765, 0, 0.647059, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.0516425, 1.96373e-05, 0.225641, 0.32549)
+
+[sub_resource type="Resource" id="Resource_7jidy"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("16_byarp")
+name = "Sketched"
+role = "Programmer & Game Designer"
+label_settings = SubResource("LabelSettings_r8ymr")
+
+[sub_resource type="LabelSettings" id="LabelSettings_tmj41"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.255, 0.412, 0.886, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.064, 0.137, 0.4, 0.58)
+
+[sub_resource type="Resource" id="Resource_kqonq"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("17_k5w5c")
+name = "Bludoo"
+role = "Programmer & Game Designer"
+label_settings = SubResource("LabelSettings_tmj41")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ncy1i"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.1848, 0.88, 0.231147, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.0861411, 0.321197, 0.101117, 0.58)
+
+[sub_resource type="Resource" id="Resource_pbofr"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("29_p23p7")
+name = "TheRandomDog"
+role = "Game Programmer"
+label_settings = SubResource("LabelSettings_ncy1i")
+
+[sub_resource type="Resource" id="Resource_2m611"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("7_18ybd")
+name = "Kel'Block"
+role = "3D Artist, Animator & Texture Artist"
+label_settings = SubResource("LabelSettings_yadbj")
+
+[sub_resource type="LabelSettings" id="LabelSettings_2akq4"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.27451, 0.509804, 0.705882, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.10713, 0.285534, 0.308891, 0.713726)
+
+[sub_resource type="Resource" id="Resource_1oxjh"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("10_ulfld")
+name = "Elisei"
+role = "3D Artist & Texture Artist"
+label_settings = SubResource("LabelSettings_2akq4")
+
+[sub_resource type="LabelSettings" id="LabelSettings_q52wn"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.184314, 0.74902, 0.607843, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.0368, 0.23, 0.1817, 0.501961)
+
+[sub_resource type="Resource" id="Resource_hdogm"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("12_fxlu6")
+name = "neoNote"
+role = "3D Artist & Texture Artist"
+label_settings = SubResource("LabelSettings_q52wn")
+
+[sub_resource type="LabelSettings" id="LabelSettings_sejxq"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.211765, 0, 0.647059, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.0516425, 1.96373e-05, 0.225641, 0.32549)
+
+[sub_resource type="Resource" id="Resource_dib10"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("24_q8jnd")
+name = "Measured Moth"
+role = "Programmer, Game Designer & Rigging"
+label_settings = SubResource("LabelSettings_sejxq")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fh015"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.890196, 0.478431, 0.14902, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.455467, 0.224786, 0.0267251, 0.345)
+
+[sub_resource type="Resource" id="Resource_7gmnw"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("23_m1mdq")
+name = "Boots"
+role = "3D Artist & Animator"
+label_settings = SubResource("LabelSettings_fh015")
+
+[sub_resource type="LabelSettings" id="LabelSettings_f4uvq"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.99, 0.1584, 0.17226, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.241208, 0.0153124, 0.118658, 0.501961)
+
+[sub_resource type="Resource" id="Resource_7hcke"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("5_n30h7")
+name = "Loonatic"
+role = "Technical Artist & Texture Artist"
+label_settings = SubResource("LabelSettings_f4uvq")
+
+[sub_resource type="LabelSettings" id="LabelSettings_o3tdj"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(1, 0.544457, 0.454295, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.15, 0.02, 0, 0.529412)
+
+[sub_resource type="Resource" id="Resource_5m0kl"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("6_sndmm")
+name = "Lavender"
+role = "Logo, Texture & UI Artist"
+label_settings = SubResource("LabelSettings_o3tdj")
+
+[sub_resource type="LabelSettings" id="LabelSettings_5bhjy"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.27451, 0.509804, 0.705882, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.10713, 0.285534, 0.308891, 0.713726)
+
+[sub_resource type="Resource" id="Resource_5lw2h"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("8_igbbe")
+name = "SleepyEli"
+role = "Achievement Icons"
+label_settings = SubResource("LabelSettings_5bhjy")
+
+[sub_resource type="LabelSettings" id="LabelSettings_hh8xr"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0, 0.283333, 1, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0, 0.0253333, 0.19, 0.501961)
+
+[sub_resource type="Resource" id="Resource_qhht1"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("9_efc6d")
+name = "Unfinished"
+role = "Composer"
+label_settings = SubResource("LabelSettings_hh8xr")
+
+[sub_resource type="LabelSettings" id="LabelSettings_34e88"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.211765, 0, 0.647059, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.0516425, 1.96373e-05, 0.225641, 0.32549)
+
+[sub_resource type="Resource" id="Resource_1g23c"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("4_hafue")
+name = "Buck"
+role = "Programmer, Composer & Sound Designer"
+label_settings = SubResource("LabelSettings_34e88")
+
+[sub_resource type="LabelSettings" id="LabelSettings_dxg0f"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.254902, 0.411765, 0.886275, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.064, 0.1368, 0.4, 0.584314)
+
+[sub_resource type="Resource" id="Resource_4b13b"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("11_bjiit")
+name = "Jake Henderson"
+role = "Writer & Designer"
+label_settings = SubResource("LabelSettings_dxg0f")
+
+[sub_resource type="LabelSettings" id="LabelSettings_lp0s0"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.89, 0.1424, 0.77786, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.370647, 0.0954, 0.53, 0.572549)
+
+[sub_resource type="Resource" id="Resource_2bp18"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("15_bvjdg")
+name = "LadyMisticus"
+role = "Writer & Character Designer"
+label_settings = SubResource("LabelSettings_lp0s0")
+
+[sub_resource type="LabelSettings" id="LabelSettings_rf1qn"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.654902, 0.266667, 1, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.256003, 0.000672724, 0.430362, 0.411)
+
+[sub_resource type="Resource" id="Resource_coqfa"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("13_jkk5t")
+name = "Niko Frost"
+role = "Quality Assurance"
+label_settings = SubResource("LabelSettings_rf1qn")
+
+[sub_resource type="LabelSettings" id="LabelSettings_lu6ox"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(1, 0.819608, 0.862745, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.488, 0, 0.233, 0.308)
+
+[sub_resource type="Resource" id="Resource_w23nx"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("14_n64th")
+name = "Raine"
+role = "Quality Assurance"
+label_settings = SubResource("LabelSettings_lu6ox")
+
+[sub_resource type="Resource" id="Resource_ol1pa"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("12_ed774")
+name = "Supergoose"
+role = "Quality Assurance"
+label_settings = SubResource("LabelSettings_5bhjy")
+
+[sub_resource type="LabelSettings" id="LabelSettings_rdjg7"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0.87451, 0.596078, 0.807843, 1)
+outline_color = Color(1.50409e-07, 0, 0.157023, 1)
+shadow_size = 4
+shadow_color = Color(0.261001, 0.0886031, 0.227863, 0.525)
+
+[sub_resource type="Resource" id="Resource_mdpg3"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("18_b78ew")
+name = "John Boyo"
+role = "Quality Assurance"
+label_settings = SubResource("LabelSettings_rdjg7")
+
+[sub_resource type="Resource" id="Resource_c5kur"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("19_12m3w")
+name = "Toontown: Event Horizon"
+role = "Cog Rigs"
+
+[sub_resource type="Resource" id="Resource_daahu"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("17_i8d8j")
+name = "Goatcanon"
+role = ""
+
+[sub_resource type="Resource" id="Resource_m42v0"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("14_ronfa")
+name = "Greetings"
+role = ""
+
+[sub_resource type="Resource" id="Resource_ohm68"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("27_xwo8y")
+name = "Princess Sandy"
+role = ""
+
+[sub_resource type="Resource" id="Resource_hc3ke"]
+script = ExtResource("3_ksngi")
+icon = ExtResource("18_jfa0w")
+name = "StuckTheDuck"
+role = ""
+
+[sub_resource type="LabelSettings" id="LabelSettings_eknjt"]
+font = ExtResource("23_ts00s")
+font_size = 42
+font_color = Color(0.941176, 0.572549, 0.184314, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pa3ay"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aj6wg"]
+font = ExtResource("3_8rgp0")
+font_color = Color(0.201527, 0.201527, 0.201527, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mbtjq"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fwgh3"]
+font = ExtResource("3_8rgp0")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ef8ac"]
+font = ExtResource("3_8rgp0")
+
+[node name="CreditsPanel" instance=ExtResource("1_py1ix")]
+offset_left = -254.0
+offset_top = -260.0
+offset_right = 254.0
+offset_bottom = 260.0
+pivot_offset = Vector2(254, 260)
+script = ExtResource("2_3oeyj")
+credits = Array[ExtResource("3_ksngi")]([SubResource("Resource_ttvt2"), SubResource("Resource_7jidy"), SubResource("Resource_kqonq"), SubResource("Resource_pbofr"), SubResource("Resource_2m611"), SubResource("Resource_1oxjh"), SubResource("Resource_hdogm"), SubResource("Resource_dib10"), SubResource("Resource_7gmnw"), SubResource("Resource_7hcke"), SubResource("Resource_5m0kl"), SubResource("Resource_5lw2h"), SubResource("Resource_qhht1"), SubResource("Resource_1g23c"), SubResource("Resource_4b13b"), SubResource("Resource_2bp18"), SubResource("Resource_coqfa"), SubResource("Resource_w23nx"), SubResource("Resource_ol1pa"), SubResource("Resource_mdpg3"), SubResource("Resource_c5kur")])
+special_thanks = Array[ExtResource("3_ksngi")]([SubResource("Resource_daahu"), SubResource("Resource_m42v0"), SubResource("Resource_ohm68"), SubResource("Resource_hc3ke")])
+title = "Credits"
+body = ""
+
+[node name="Panel" parent="." index="0"]
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pivot_offset = Vector2(254, 260)
+
+[node name="Title" parent="Panel" index="0"]
+offset_top = 42.0
+offset_bottom = 88.0
+text = "Credits"
+label_settings = SubResource("LabelSettings_eknjt")
+
+[node name="Body" parent="Panel" index="1"]
+text = ""
+
+[node name="CancelButton" parent="Panel" index="2"]
+hover_db_offset = 6.0
+press_db_offset = 0.0
+
+[node name="CreditWindow" type="Control" parent="Panel" index="3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -209.0
+offset_top = -178.5
+offset_right = 209.0
+offset_bottom = 220.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/CreditWindow" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("24_gujno")
+
+[node name="CreditContainer" type="VBoxContainer" parent="Panel/CreditWindow/ScrollContainer" index="0"]
+layout_mode = 2
+
+[node name="HSizer" type="Control" parent="Panel/CreditWindow/ScrollContainer/CreditContainer" index="0"]
+custom_minimum_size = Vector2(418, 0)
+layout_mode = 2
+
+[node name="CreditTemplate" type="HBoxContainer" parent="." index="2"]
+visible = false
+texture_filter = 2
+layout_mode = 2
+offset_left = 28.0
+offset_top = 106.0
+offset_right = 446.0
+offset_bottom = 170.0
+
+[node name="Icon" type="TextureRect" parent="CreditTemplate" index="0"]
+texture_filter = 4
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_s4vxw")
+expand_mode = 1
+
+[node name="LabelContainer" type="VBoxContainer" parent="CreditTemplate" index="1"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="CreditTemplate/LabelContainer" index="0"]
+layout_mode = 2
+text = "Namey McPersonson"
+label_settings = SubResource("LabelSettings_pa3ay")
+
+[node name="Role" type="Label" parent="CreditTemplate/LabelContainer" index="1"]
+layout_mode = 2
+text = "Game Designer"
+label_settings = SubResource("LabelSettings_aj6wg")
+
+[node name="ThanksLabel" type="Label" parent="." index="3"]
+visible = false
+layout_mode = 2
+offset_left = 28.0
+offset_top = 72.0
+offset_right = 446.0
+offset_bottom = 103.0
+text = "Special Thanks"
+label_settings = SubResource("LabelSettings_mbtjq")
+horizontal_alignment = 1
+
+[node name="FakeoutCredit" type="HBoxContainer" parent="." index="4"]
+visible = false
+layout_mode = 2
+offset_left = 234.91
+offset_top = 255.985
+offset_right = 652.91
+offset_bottom = 322.985
+
+[node name="Icon" type="TextureRect" parent="FakeoutCredit" index="0"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("22_x0h0m")
+expand_mode = 1
+
+[node name="LabelContainer" type="VBoxContainer" parent="FakeoutCredit" index="1"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="FakeoutCredit/LabelContainer" index="0"]
+layout_mode = 2
+text = "You!"
+label_settings = SubResource("LabelSettings_fwgh3")
+
+[node name="GeneralButton" parent="FakeoutCredit/LabelContainer" index="1" instance=ExtResource("23_dkcqs")]
+custom_minimum_size = Vector2(90.985, 32)
+layout_mode = 2
+texture_normal = ExtResource("24_kw4b7")
+texture_pressed = ExtResource("25_o5hyb")
+texture_hover = ExtResource("26_vw3sy")
+texture_disabled = null
+hover_db_offset = 6.0
+press_db_offset = 0.0
+text = "Really?"
+
+[node name="Label" parent="FakeoutCredit/LabelContainer/GeneralButton" index="0"]
+text = "Really?"
+label_settings = SubResource("LabelSettings_ef8ac")
+
+[node name="Role" type="Label" parent="FakeoutCredit/LabelContainer" index="2"]
+visible = false
+layout_mode = 2
+text = "No, not you. The guy behind you."
+label_settings = SubResource("LabelSettings_aj6wg")
+
+[connection signal="button_down" from="Panel/CreditWindow/ScrollContainer/CreditContainer/FakeoutCredit/LabelContainer/GeneralButton" to="Panel/CreditWindow/ScrollContainer/CreditContainer/FakeoutCredit/LabelContainer/GeneralButton" method="on_button_down"]
+[connection signal="mouse_entered" from="Panel/CreditWindow/ScrollContainer/CreditContainer/FakeoutCredit/LabelContainer/GeneralButton" to="Panel/CreditWindow/ScrollContainer/CreditContainer/FakeoutCredit/LabelContainer/GeneralButton" method="on_mouse_entered"]
+[connection signal="pressed" from="Panel/CreditWindow/ScrollContainer/CreditContainer/FakeoutCredit/LabelContainer/GeneralButton" to="." method="do_fakeout"]
+[connection signal="pressed" from="FakeoutCredit/LabelContainer/GeneralButton" to="." method="do_fakeout"]
+
+[editable path="FakeoutCredit/LabelContainer/GeneralButton"]

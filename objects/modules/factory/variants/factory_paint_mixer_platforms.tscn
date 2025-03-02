@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6eci400go3qt"]
+
+[ext_resource type="PackedScene" uid="uid://chdkp682v5kgu" path="res://objects/modules/factory/base_rooms/factory_paint_mixer.tscn" id="1_owb7g"]
+[ext_resource type="PackedScene" uid="uid://q13pfs05aior" path="res://objects/obstacles/paint_platform/paintmixer_platform.tscn" id="2_718mm"]
+[ext_resource type="Script" path="res://objects/obstacles/lava_floor/lava_floor.gd" id="3_so2ux"]
+[ext_resource type="PackedScene" uid="uid://dxyq5lb5oineo" path="res://objects/interactables/treasure_chest/treasure_chest.tscn" id="5_ldx13"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7s7ng"]
+height = 2.18952
+radius = 11.2593
+
+[node name="FactoryPaintMixer" instance=ExtResource("1_owb7g")]
+
+[node name="faucet1" parent="Model/ZONE10/paintmixer/props6/Faucets" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.9116, -32.9268, -285.397)
+
+[node name="LavaFloor" type="Area3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.763, 2.001, -101.057)
+collision_mask = 2
+script = ExtResource("3_so2ux")
+damage_name = "Goopy Paint"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LavaFloor" index="0"]
+shape = SubResource("CylinderShape3D_7s7ng")
+
+[node name="Platforms" type="Node3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.28, 0, -101.269)
+
+[node name="PaintPlatform" parent="Platforms" index="0" instance=ExtResource("2_718mm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.82362, 4.59213, -1.87728)
+points = Array[Vector3]([Vector3(-5.39073, 4.59213, 2.6108)])
+
+[node name="PaintMixerBase" parent="Platforms/PaintPlatform" index="0"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.02, 0, 0.01, -8.74228e-10, 4.88281e-06, -1.07324, 0)
+
+[node name="ShaftCollide" parent="Platforms/PaintPlatform" index="3"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.02, 0, 0.01, -8.74228e-10, 4.88281e-06, -1.07324, 0)
+
+[node name="PaintPlatform2" parent="Platforms" index="1" instance=ExtResource("2_718mm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.129311, 7.20168, 2.74741)
+points = Array[Vector3]([Vector3(-0.731133, 4.59213, 4.99598)])
+
+[node name="PaintMixerBase" parent="Platforms/PaintPlatform2" index="0"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.02, 0, 0.01, -8.74228e-10, 4.88281e-06, -1.07324, 0)
+
+[node name="ShaftCollide" parent="Platforms/PaintPlatform2" index="3"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.02, 0, 0.01, -8.74228e-10, 4.88281e-06, -1.07324, 0)
+
+[node name="PaintPlatform3" parent="Platforms" index="2" instance=ExtResource("2_718mm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041, 7.202, -1.572)
+points = Array[Vector3]([Vector3(0.78405, 4.592, -5.74721)])
+
+[node name="PaintMixerBase" parent="Platforms/PaintPlatform3" index="0"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.02, 0, 0.01, -8.74228e-10, 4.88281e-06, -1.07324, 0)
+
+[node name="ShaftCollide" parent="Platforms/PaintPlatform3" index="3"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.02, 0, 0.01, -8.74228e-10, 4.88281e-06, -1.07324, 0)
+
+[node name="PaintPlatform4" parent="Platforms" index="3" instance=ExtResource("2_718mm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.90295, 4.592, 2.70421)
+points = Array[Vector3]([Vector3(5.0893, 4.592, -3.93958)])
+
+[node name="PaintMixerBase" parent="Platforms/PaintPlatform4" index="0"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.02, 0, 0.01, -8.74228e-10, 4.88281e-06, -1.07324, 0)
+
+[node name="PaintMixerTop_001" parent="Platforms/PaintPlatform4" index="1"]
+transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, -0.140648)
+
+[node name="ShaftCollide" parent="Platforms/PaintPlatform4" index="3"]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.02, 0, 0.01, -8.74228e-10, 4.88281e-06, -1.07324, 0)
+
+[node name="treasure_chest" parent="." index="9" instance=ExtResource("5_ldx13")]
+transform = Transform3D(0.582889, 0, -0.812552, 0, 1, 0, 0.812552, 0, 0.582889, 77.8591, 12.6252, -111.023)
+
+[connection signal="body_entered" from="LavaFloor" to="LavaFloor" method="body_entered"]
+
+[editable path="Platforms/PaintPlatform"]
+[editable path="Platforms/PaintPlatform2"]
+[editable path="Platforms/PaintPlatform3"]
+[editable path="Platforms/PaintPlatform4"]
