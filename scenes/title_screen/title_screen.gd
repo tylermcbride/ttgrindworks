@@ -51,7 +51,9 @@ var has_existing_run: bool:
 
 func _ready() -> void:
 	Engine.time_scale = 1.0
-
+	
+	Util.stuck_lock = false
+	
 	# If we have a stored character from a "try again" lose prompt,
 	# throw it in here so that they will be in the cog building
 	if Util.stored_try_again_char_name:

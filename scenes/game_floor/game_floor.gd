@@ -1,7 +1,7 @@
 extends Node3D
 class_name GameFloor
 
-const ROOM_REPEAT_DETECTION_SIZE := 4
+const ROOM_REPEAT_DETECTION_SIZE := 3
 
 ## The Floor Variant to be loaded into.
 @export var floor_variant: FloorVariant
