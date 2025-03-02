@@ -24,7 +24,7 @@ Enjoy!
   - Project Lead, Programmer & Designer
 - Sketched
   - Programmer & Game Designer
-- Bludoo (Owen)
+- Bludoo
   - Programmer & Game Designer
 - TheRandomDog
   - Game Programmer
