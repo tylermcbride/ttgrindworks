@@ -59,6 +59,7 @@ func action():
 	
 	# React to hit or not hit
 	if hit:
+		s_hit.emit()
 		AudioManager.play_sound(sfx_hit)
 		# Scale down head
 		target.set_animation('anvil-drop')
