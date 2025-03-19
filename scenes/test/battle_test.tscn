@@ -23,7 +23,7 @@
 [ext_resource type="Script" uid="uid://b68uqtpqs73wk" path="res://objects/player/player_stats.gd" id="17_8fcps"]
 [ext_resource type="Script" uid="uid://ckypnf7t805p3" path="res://objects/battle/battle_resources/gag_loadouts/gag_loadout.gd" id="17_aepo7"]
 [ext_resource type="PackedScene" uid="uid://dxyq5lb5oineo" path="res://objects/interactables/treasure_chest/treasure_chest.tscn" id="23_16xtn"]
-[ext_resource type="Resource" uid="uid://d1sg8wpnwglgj" path="res://objects/items/resources/accessories/glasses/mover_stache.tres" id="24_16xtn"]
+[ext_resource type="Resource" uid="uid://btulfwpwu6jii" path="res://objects/items/resources/accessories/glasses/mover_stache.tres" id="24_16xtn"]
 [ext_resource type="Resource" uid="uid://rd3bytip2nnb" path="res://objects/items/resources/accessories/hats/tiara.tres" id="25_16xtn"]
 [ext_resource type="Resource" uid="uid://b4pssn72ke7uu" path="res://objects/items/resources/accessories/glasses/heart_glasses.tres" id="26_ouruu"]
 [ext_resource type="Resource" uid="uid://c3sjb3vivkvux" path="res://objects/items/resources/passive/laff_boost.tres" id="27_4p2an"]
