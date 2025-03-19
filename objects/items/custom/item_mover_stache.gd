@@ -2,9 +2,6 @@ extends ItemScript
 
 const DEBUFF := preload("res://objects/battle/battle_resources/status_effects/resources/status_effect_aftershock.tres")
 
-var movie = create_tween()
-var shaking: bool = false
-
 func on_collect(_item: Item, _model: Node3D) -> void:
 	setup()
  
@@ -16,31 +13,6 @@ func setup() -> void:
 
 func on_battle_start(manager: BattleManager) -> void:
 	manager.s_action_added.connect(action_injected)
-
-# pasted from BattleStartMovie because I'm not sure how to call that function here lol
-func shake_camera(cam : Camera3D, time : float, offset : float, taper := true, x := true, y := true, z := true) -> void:
-	var base_pos := cam.global_position
-	var shaking := true
-	
-	var timer := cam.get_tree().create_timer(time)
-	
-	while shaking:
-		await Util.s_process_frame
-		var new_offset : float
-		if taper:
-			new_offset = offset * timer.time_left/time
-		else:
-			new_offset = offset
-		if x:
-			cam.global_position.x = base_pos.x + RandomService.randf_range_channel('true_random', -new_offset,new_offset)
-		if y:
-			cam.global_position.y = base_pos.y + RandomService.randf_range_channel('true_random', -new_offset,new_offset)
-		if z:
-			cam.global_position.z = base_pos.z + RandomService.randf_range_channel('true_random', -new_offset,new_offset)
-		
-		if timer.time_left <= 0:
-			shaking = false
-
 
 func action_injected(action: BattleAction, manager: BattleManager) -> void:
 	if action is GagDrop:
@@ -57,8 +29,6 @@ func action_injected(action: BattleAction, manager: BattleManager) -> void:
 			if i == cogPos + 1 or i == cogPos - 1:
 				hitCogs.append(cogs[i])
 		await action.s_hit
-		movie.tween_callback(shake_camera.bind(get_viewport().get_camera_3d(), 0.5, 0.2, true, false, true, false))
-		movie.play()
 		await Task.delay(0.25)
 		for i in range(hitCogs.size()):
 			var cog = hitCogs[i]
