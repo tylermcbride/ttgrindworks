@@ -58,6 +58,7 @@ func action():
 	gag.get_node('AnimationPlayer').play('drop')
 	
 	if hit:
+		s_hit.emit()
 		AudioManager.play_sound(sfx_hit)
 		target.set_animation('drop')
 		if not get_immunity(target):

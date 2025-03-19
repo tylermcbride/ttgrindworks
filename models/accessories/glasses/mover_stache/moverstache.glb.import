@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dyp4tbdvehhbu"
-valid=false
+uid="uid://donwnpe5qydfa"
+path="res://.godot/imported/moverstache.glb-3798d243ca97976e461b34e10b63ed7d.scn"
 
 [deps]
 
-source_file="res://models/props/treasure_chest/treasure_chest.fbx"
+source_file="res://models/accessories/glasses/mover_stache/moverstache.glb"
+dest_files=["res://.godot/imported/moverstache.glb-3798d243ca97976e461b34e10b63ed7d.scn"]
 
 [params]
 
@@ -27,11 +28,10 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-fbx/importer=1
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
+gltf/naming_version=1
+gltf/embedded_image_handling=1

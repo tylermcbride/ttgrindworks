@@ -83,7 +83,7 @@ func start_battle(cog_array: Array[Cog], battlenode: BattleNode):
 
 func append_action(action: BattleAction):
 	round_actions.append(action)
-	s_action_added.emit(action)
+	s_action_added.emit(action, self)
 
 func gags_selected(gags: Array[ToonAttack]):
 	for gag in gags:
@@ -690,7 +690,7 @@ func find_cog_lure(cog: Cog) -> StatusLured:
 func inject_battle_action(battle_action : BattleAction,position : int):
 	print("Action injected")
 	round_actions.insert(position,battle_action)
-	s_action_added.emit(battle_action)
+	s_action_added.emit(battle_action, self)
 
 # Set the camera angle to the specified transform
 func set_camera_angle(transform : Transform3D):
