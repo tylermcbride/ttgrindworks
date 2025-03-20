@@ -1,7 +1,6 @@
 extends BattleStartMovie
 class_name MoleCogIntro
 
-
 const SFX_HIT := preload("res://audio/sfx/objects/moles/Mole_Stomp.ogg")
 const SFX_FLYBACK := preload("res://audio/sfx/misc/tt_s_ara_mat_crash_glassBoing.ogg")
 const SFX_JUMP := preload("res://audio/sfx/misc/General_throw_miss.ogg")
